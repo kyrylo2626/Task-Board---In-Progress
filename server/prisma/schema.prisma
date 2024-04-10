@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model priority {
+  priority_id Int     @id @default(autoincrement())
+  name        String  @db.VarChar
+  tasks       tasks[]
+}
+
+model task_lists {
+  list_id     Int      @id(map: "tasklists_pkey") @default(autoincrement())
+  name        String   @db.VarChar
+  time_create DateTime @default(now()) @db.Timestamp(6)
+  tasks       tasks[]
+}
+
+model tasks {
+  task_id     Int        @id @default(autoincrement())
+  list_id     Int
+  name        String     @db.VarChar(255)
+  priority_id Int        @default(1)
+  description String
+  due_date    DateTime   @db.Timestamp(6)
+  time_create DateTime   @default(now()) @db.Timestamp(6)
+  time_update DateTime   @default(now()) @db.Timestamp(6)
+  history     history[]
+  priority    priority   @relation(fields: [priority_id], references: [priority_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_tasks_priority")
+  task_lists  task_lists @relation(fields: [list_id], references: [list_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_tasks_tasklists")
+}
+
+model history {
+  history_id  Int      @id(map: "activity_pkey") @default(autoincrement())
+  action      String
+  task_id     Int?
+  time_create DateTime @default(now()) @db.Timestamp(6)
+  tasks       tasks?   @relation(fields: [task_id], references: [task_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_task_id")
+}
