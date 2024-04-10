@@ -1,0 +1,11 @@
+* {
+  color: black;
+}
+
+.main {
+  height: 98vh;
+  width: 95%;
+  position: absolute;
+  left:50%;
+  transform:translate(-50%, 0);
+}

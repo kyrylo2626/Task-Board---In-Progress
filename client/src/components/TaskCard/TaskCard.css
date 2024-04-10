@@ -1,0 +1,82 @@
+.taskcard {
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 2px #e1e1e6 solid;
+    transition: 0.2s linear;
+    white-space: normal;
+    position: relative;
+}
+
+.taskcard:hover {
+    border-color: black;
+}
+
+.taskheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tasktext {
+    display:inline-block;
+    margin-top: 5px;
+    font-weight: 500;
+    color: gray;
+    font-size: 8pt;
+    line-height: 1.5;
+}
+
+.taskdue {
+    display:inline-block;
+    margin: 5px 0;
+    color: #5a647d;
+}
+
+.taskpriority {
+    display:inline-block;
+    background-color: #f0f0f5;
+    border-radius: 5px;
+    color: gray;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.taskbutton {
+    width: 100%;
+    border: 2px #e1e1e6 solid;
+    border-radius: 5px;
+    background-color: #e1e1e6;
+    padding: 7px 10px;
+    transition: 0.2s linear;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskbutton:hover {
+    border-color: black;
+}
+
+.crs {
+    cursor: pointer;
+}
+
+.iconpointscard {
+    font-size: 14pt;
+    transition: 0.2s linear;
+}
+
+.ipc:hover {
+    stroke: darkgray;
+}
+
+.carddate {
+    display: flex;
+    align-items: center;
+}
+
+.icondate {
+    stroke: #5a647d;
+    font-size: 16pt;
+    margin-right: 5px;
+}

@@ -1,0 +1,40 @@
+.popupwin {
+    width: 58%;
+    border-radius: 5px;
+    border: 2px #e1e1e6 solid;
+    position: absolute;
+    box-shadow: 0 0 5px gray;
+    z-index: 1000;
+}
+
+.popuplist {
+    margin-top: 15%;
+    margin-left: 85%;
+}
+
+.popupcard {
+    width: 40%;
+    margin-top: 12%;
+    margin-left: 45%;
+}
+
+.popupbtn {
+    width: 100%;
+    border: none;
+    background-color: white;
+    padding: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s linear;
+    display: flex;
+    align-items: center;
+}
+
+.popupbtn:hover {
+    background-color: #f0f0f5;
+}
+
+.popupicon {
+    font-size: 14pt;
+    margin-right: 10px;
+}

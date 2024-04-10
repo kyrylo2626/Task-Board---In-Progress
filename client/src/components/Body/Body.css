@@ -1,0 +1,24 @@
+.body {
+    height: 83%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+.pointBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+}
+
+.emptyLists {
+    display: flex;
+    align-items: center;
+    font-size: 24pt;
+    color: gray;
+}
